@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perbet Travel and Tours</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <a href="#top" class="scrollbtn">Perbet Travels</a>
+                </div>
+                <div class="search">
+                    <div class="searchBlock">
+                    </div>
+                </div>
+                <div class="btns">
+                    <a href="javascript:void(0)" id="loginbtn">Login</a>
+                    <a href="#about" class="scrollbtn">About Us</a>
+                    <a href="#sign" class="scrollbtn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="intro" id="top">
+            <div class="heading">
+                <div class="brand" style="background-color: rgba(0,0,0,0.4);border:3px solid white;">
+                    <h1>Perbet</h1>
+                    <h2>A Luxury Tour Service to Awesome Places like Northern Areas of Pakistan</h2>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="heading">
+                <div class="brand">
+                    <h3 style="color:black;">Plan a Trip Today</h3>
+                    <p style="color:black">Are you going to visit the northern side? Use our service to gain the best out of it at a very low rate. Luxury services, secure travelling and much more</p>
+                    <a href="about.html" class="btn">About</a>
+                </div>
+            </div>
+        </div>
+        <div class="services" id="sign">
+            <div class="heading">
+                <div class="brand">
+                    <h3>Sign Up</h3>
+                    <p>Sign up now to get premium features, coupons and discounts</p>
+                    <a href="about.html" class="btn" style="border-color:white;color:white;">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div style="width:100%;height:000px"></div>
+                    <div class="login-popup-bg" id="bg">
+                    <div class="login-popup animate" id="pop">
+                        <a href="javascript:void(0)" id="close" class="close">&times;</a>
+                        <form method="get" action="login.php">
+                            <input type="text" />
+                        </form>
+                    </div>
+                    </div>
+                    <script>
+                        var b = document.getElementById('loginbtn');
+                        var w = document.getElementById('pop');
+                        var bg = document.getElementById('bg');
+                        var c = document.getElementById('close');
+                        b.onclick = function() {
+                            w.style.display = 'block';
+                            bg.style.display = 'block';
+                        }
+                        c.onclick = function() {
+                                $('#pop').addClass('animateback');
+                                setTimeout(function(){
+                                bg.style.display = "none";
+                                $('#pop').removeClass('animateback');
+                                },600);
+                        }
+                        window.onclick = function(event) {
+                            if (event.target == bg) {
+                                $('#pop').addClass('animateback');
+                                setTimeout(function(){
+                                bg.style.display = "none";
+                                $('#pop').removeClass('animateback');
+                                },600);
+                            }
+                        }
+                    </script>
+        <script type="text/javascript" src="js/javascript.js"></script>
+    </body>
+</html>
